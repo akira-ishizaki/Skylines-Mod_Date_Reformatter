@@ -38,7 +38,6 @@ namespace Mod_Date_Reformatter
 			{
 				this.m_AssetsList = new List<Package.Asset>();
 			}
-			//CODebugBase<LogChannel>.Log(LogChannel.Core, "mmd:"+mmd.ToString());
 			if (this.m_MetaDataList == null)
 			{
 				this.m_MetaDataList = new List<MetaData>();
