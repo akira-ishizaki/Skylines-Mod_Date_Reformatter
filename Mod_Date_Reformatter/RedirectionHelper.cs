@@ -43,14 +43,6 @@ namespace Mod_Date_Reformatter
 	/// </summary>
 	public static class RedirectionHelper
 	{
-		public static RedirectCallsState RedirectCalls(Type from, Type to, string methodName, int parametersLength)
-		{
-			MethodInfo originalMethod = from.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault(m => m.Name == methodName && m.GetParameters().Length == parametersLength);
-			MethodInfo replacementMethod = to.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault(m => m.Name == methodName && m.GetParameters().Length == parametersLength);
-
-			return RedirectionHelper.RedirectCalls(originalMethod, replacementMethod);
-		}
-
 		public static void RedirectCalls(List<RedirectCallsState> callStates, Type from, Type to, string methodName, int parametersLength)
 		{
 			MethodInfo originalMethod = from.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault(m => m.Name == methodName && m.GetParameters().Length == parametersLength);

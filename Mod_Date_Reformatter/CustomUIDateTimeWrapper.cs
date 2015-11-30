@@ -27,13 +27,7 @@ namespace Mod_Date_Reformatter
 
 		public static void RedirectCalls(List<RedirectCallsState> callStates)
 		{
-			MethodInfo originalMethod = typeof(UIDateTimeWrapper).GetMethods().FirstOrDefault(m => m.Name == "Check" && m.GetParameters().Length == 1);
-			MethodInfo replacementMethod = typeof(CustomUIDateTimeWrapper).GetMethods().FirstOrDefault(m => m.Name == "Check" && m.GetParameters().Length == 1);
-
-			if (originalMethod != null && replacementMethod != null)
-			{
-				callStates.Add(RedirectionHelper.RedirectCalls(originalMethod, replacementMethod));
-			}
+			RedirectionHelper.RedirectCalls(callStates, typeof(UIDateTimeWrapper), typeof(CustomUIDateTimeWrapper), "Check", 1);
 		}
 	}
 }
