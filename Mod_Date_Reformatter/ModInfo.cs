@@ -33,17 +33,21 @@ namespace Mod_Date_Reformatter
 			"dd MM yy",
 			"d/MM/yyyy",
 			"d/M/yyyy",
+			"dd/MMM/yyyy",
 			"dd-MMM-yyyy",
 			"dd MMM yyyy",
 			"d-MMM-yyyy",
 			"d MMM yyyy",
+			"MMM dd, yyyy",
+			"MMM dd yyyy",
 			"MM/dd/yyyy",
 			"yyyy/MM/dd",
 			"yyyy-MM-dd",
 			"yyyy MM dd",
+			"yyyy MMM d",
+			"yyyy/M/d",
 			"yy/MM/dd",
 			"yy-MM-dd",
-			"yyyy/M/d",
 		};
 
 		public static string[] TimeFormats = new string[]
